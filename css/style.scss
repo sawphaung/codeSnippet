@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+  margin: 0 5%;
+}
+
+// Utilities
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+.pd-10 {
+  @include padding($padding: 10px);
+}
+
+@mixin margin-bottom($margin) {
+  margin-bottom: $margin;
+}
+
+.mb-10 {
+  @include margin-bottom($margin: 10px);
+}
+
+// Headline Styling
+.headline {
+  margin: 20px auto;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ebebeb;
+}
+
+// Mixins for Buttons
+@mixin button(
+  $max-width,
+  $font-size: 14px,
+  $height: 50px,
+  $border-radius: 5px,
+  $text-transform: uppercase,
+  $color: #fff,
+  $bg-color: orange
+) {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  max-width: $max-width;
+  height: $height;
+  line-height: $height;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  color: $color;
+  text-align: center;
+  text-transform: $text-transform;
+  font-weight: 500;
+  margin-bottom: 5px;
+  background: $bg-color;
+  transition: all 0.3s ease;
+}
+
+.btn-success {
+  @include button(200px, $text-transform: uppercase, $bg-color: orange);
+
+  &:hover {
+    background: purple;
+  }
+}
+
+.btn-cta {
+  @include button(250px, $bg-color: red);
+
+  &:hover {
+    background: tomato;
+  }
+}
+
+.btn-big {
+  @include button(300px, $bg-color: purple);
+
+  &:hover {
+    background: black;
+  }
+}
+
+// Mixin for Layouts
+@mixin Columns($cols, $offset: 10px) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$offset/2;
+  margin-right: -$offset/2;
+
+  & > * {
+    width: calc(100% / #{$cols} - #{$offset});
+    margin: 0 5px;
+    outline: 1px solid #ebebeb;
+
+    @media screen and (max-width: 1200px) {
+      width: calc(50% - #{$offset});
+      margin-bottom: #{$offset};
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
+      margin: 0 auto #{$offset};
+    }
+  }
+}
+
+.col-x2 {
+  @include Columns(2);
+}
+
+.col-x3 {
+  @include Columns(3);
+}
+
+.col-x4 {
+  @include Columns(4);
+}

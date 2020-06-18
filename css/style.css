@@ -1,0 +1,192 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+  margin: 0 5%;
+}
+
+.pd-10 {
+  padding: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.headline {
+  margin: 20px auto;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ebebeb;
+}
+
+.btn-success {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 5px;
+  background: orange;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background: purple;
+}
+
+.btn-cta {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 5px;
+  background: red;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: tomato;
+}
+
+.btn-big {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 5px;
+  background: purple;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-big:hover {
+  background: black;
+}
+
+.col-x2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.col-x2 > * {
+  width: calc(100% / 2 - 10px);
+  margin: 0 5px;
+  outline: 1px solid #ebebeb;
+}
+
+@media screen and (max-width: 1200px) {
+  .col-x2 > * {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .col-x2 > * {
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+}
+
+.col-x3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.col-x3 > * {
+  width: calc(100% / 3 - 10px);
+  margin: 0 5px;
+  outline: 1px solid #ebebeb;
+}
+
+@media screen and (max-width: 1200px) {
+  .col-x3 > * {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .col-x3 > * {
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+}
+
+.col-x4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.col-x4 > * {
+  width: calc(100% / 4 - 10px);
+  margin: 0 5px;
+  outline: 1px solid #ebebeb;
+}
+
+@media screen and (max-width: 1200px) {
+  .col-x4 > * {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .col-x4 > * {
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
