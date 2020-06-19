@@ -16,6 +16,10 @@ body {
   margin: 0 5%;
 }
 
+// Colors
+$black: #000;
+$white: #fff;
+
 // Utilities
 @mixin padding($padding) {
   padding: $padding;
@@ -125,4 +129,77 @@ body {
 
 .col-x4 {
   @include Columns(4);
+}
+
+// Another Column Layouts
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+
+  & > div {
+    padding: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    border-radius: 2px;
+    background: #ddd;
+    text-align: center;
+    color: #333;
+  }
+}
+
+.col--1of1 > div {
+  width: 100%;
+}
+
+.col--1of2 > div {
+  width: 50%;
+}
+
+.col--1of3 > div {
+  width: 33.33%;
+}
+
+.col--1of4 > div {
+  width: 25%;
+}
+
+.col--1of5 > div {
+  width: 20%;
+}
+
+.col--auto > div {
+  flex: 1;
+}
+
+.col--auto > .u-1of2 {
+  flex: 1 0 50%;
+  max-width: 50%;
+}
+
+.col--auto > .u-2of3 {
+  flex: 1 0 75%;
+  max-width: 75%;
+}
+
+// Responsive (Less than 640px)
+@media screen and (max-width: 640px) {
+  .row {
+    display: block;
+    width: 100%;
+    margin: 0;
+
+    & > div {
+      margin-bottom: 10px;
+    }
+  }
+
+  .col--auto > .u-1of2 {
+    max-width: 100%;
+  }
+
+  .col--auto > .u-2of3 {
+    max-width: 100%;
+  }
 }
